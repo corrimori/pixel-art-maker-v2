@@ -37,32 +37,51 @@
 
   const drawPalette = () => {
     let createPalette = document.querySelector('#palette')
+    let createBrushPalette = document.querySelector('#showCurrentColor')
 
-    // const colors = [
-    //   'black', 'white', 'green', 'yellow', 'red', 'blue'
-    // ]
+    // draw current color box
+    const currentColor = document.createElement('div')
+    currentColor.classList.add('currentBrushColor')
+    createBrushPalette.appendChild(currentColor)
+
+    const colors = [
+      'black', 'white', 'green', 'yellow', 'red', 'blue'
+    ]
 
     // greyscale palette
-    const colors = [
-      'white','#DCDCDC', '#D3D3D3', '#C0C0C0', '#A9A9A9', '#808080', '#696969', '#778899', '#708090', '#2F4F4F', 'black'
-    ]
+    // const colors = [
+    //   'white','#DCDCDC', '#D3D3D3', '#C0C0C0', '#A9A9A9', '#808080', '#696969', '#778899', '#708090', '#2F4F4F', 'black'
+    // ]
 
     for (const color of colors) {
       const paletteColor = document.createElement('div')
-      // paletteColor.classList.add('paletteColor', colors[0])
+      // add paletteColor class to each palette color
       paletteColor.classList.add('paletteColor', color)
-      console.log('color>>>>', color)
       paletteColor.style.backgroundColor = color
       console.log('in create palette color w/ added class --------->', paletteColor)
 
+      //set color when click on palette color
       paletteColor.addEventListener('click', (event) => {
         console.log('in event listener-- add click to palette color ##########');
-        paletteColor.style.backgroundColor = 'green'
-        // brushColor = color
-        // ???.style.backgroundColor = color
+        brushColor = color
+        console.log('brushColor---->', brushColor);
+
+        currentColor.style.backgroundColor = brushColor
+        console.log('create brushColor>>>>', brushColor);
+
       })
+
       palette.appendChild(paletteColor)
+
     }
+
+    // const currentColor = document.createElement('div')
+    // currentColor.classList.add('currentBrushColor')
+    // currentColor.style.backgroundColor = brushColor
+    // console.log('create brushColor>>>>', brushColor);
+    //
+    // createBrushPalette.appendChild(currentColor)
+
 
   }
 

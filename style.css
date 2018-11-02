@@ -20,6 +20,15 @@ h1 {
 .paletteColor {
   padding: 12px 12px 12px 12px;
   margin-right: 5px;
+  margin-bottom: 10px;
+  width: 12px;
+  border-radius: 8px;
+  border: solid #808B96 1px
+}
+
+.currentBrushColor {
+  padding: 12px 12px 12px 12px;
+  margin-right: 5px;
   width: 12px;
   border-radius: 8px;
   border: solid #808B96 1px
