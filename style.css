@@ -1,6 +1,9 @@
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
+  color: dimgrey;
+  letter-spacing: 0.0625em;
+  font-size: 36px;
 }
 
 /* div {
@@ -8,10 +11,23 @@ h1 {
 } */
 
 .pixel {
-  background-color: lightpink;
-  border: 1px solid grey;
+  background-color: aliceblue;
+  border: 1px solid silver;
   height: 24px;
   width: 24px;
+}
+
+.paletteColor {
+  padding: 12px 12px 12px 12px;
+  margin-right: 5px;
+  width: 12px;
+  border-radius: 8px;
+  border: solid #808B96 1px
+}
+
+.black {
+  background-color: 'black';
+  border-color: 'black';
 }
 
 #canvas {
@@ -25,7 +41,7 @@ h1 {
 }
 
 #palette {
-  padding: 20px 20px 20px 20px;
-  width: 255px;
-  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
