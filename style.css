@@ -1,0 +1,31 @@
+h1 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+/* div {
+  background-color: lightblue;
+} */
+
+.pixel {
+  background-color: lightpink;
+  border: 1px solid grey;
+  height: 24px;
+  width: 24px;
+}
+
+#canvas {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 622px;
+  border-radius: 25px;
+  border: solid #808B96 20px;
+  padding: 5px;
+}
+
+#palette {
+  padding: 20px 20px 20px 20px;
+  width: 255px;
+  border-radius: 5px;
+}
