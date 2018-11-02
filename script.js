@@ -5,7 +5,7 @@
   'use strict';
 
   let paintBrushDown = false
-  let brushColor = 'deeppink'
+  let brushColor = 'black'
 
   const drawCanvas = () => {
     let createCanvas = document.querySelector('#canvas')
@@ -14,7 +14,6 @@
       const pixel = document.createElement('div')
       // add class pixel on each
       pixel.classList.add('pixel')
-      console.log('pixel.classList------->', pixel.classList)
       createCanvas.appendChild(pixel)
 
       // pixel.onclick = function(e){
@@ -23,6 +22,7 @@
 
       pixel.addEventListener('mousedown', (e) => {
         e.target.style.backgroundColor = brushColor
+        console.log('in EL mousedown--------->');
         // add paint coloring
         // color div to color of paint brush
       })
@@ -39,10 +39,10 @@
     let createPalette = document.querySelector('#palette')
     let createBrushPalette = document.querySelector('#showCurrentColor')
 
-    // draw current color box
+    // create box to show current color
     const currentColor = document.createElement('div')
     currentColor.classList.add('currentBrushColor')
-    createBrushPalette.appendChild(currentColor)
+    showCurrentColor.appendChild(currentColor)
 
     const colors = [
       'black', 'white', 'green', 'yellow', 'red', 'blue'
@@ -58,7 +58,6 @@
       // add paletteColor class to each palette color
       paletteColor.classList.add('paletteColor', color)
       paletteColor.style.backgroundColor = color
-      console.log('in create palette color w/ added class --------->', paletteColor)
 
       //set color when click on palette color
       paletteColor.addEventListener('click', (event) => {
@@ -74,14 +73,6 @@
       palette.appendChild(paletteColor)
 
     }
-
-    // const currentColor = document.createElement('div')
-    // currentColor.classList.add('currentBrushColor')
-    // currentColor.style.backgroundColor = brushColor
-    // console.log('create brushColor>>>>', brushColor);
-    //
-    // createBrushPalette.appendChild(currentColor)
-
 
   }
 
