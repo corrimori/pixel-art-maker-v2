@@ -21,13 +21,25 @@
       // }
 
       pixel.addEventListener('mousedown', (e) => {
+        e.preventDefault()
         e.target.style.backgroundColor = brushColor
         console.log('in EL mousedown--------->');
-        // add paint coloring
-        // color div to color of paint brush
+        paintBrushDown = true
       })
 
+      pixel.addEventListener('mouseover', (e) => {
+        e.preventDefault()
+        if (paintBrushDown) {
+          console.log('paintbrush is DOWN!>>>');
+          e.target.style.backgroundColor = brushColor
+        }
+      })
+
+      // on mouseover, if paintBrushDown = true, color pixel
+
       pixel.addEventListener('mouseup', () => {
+        console.log('in EL mouseup $$$$$$$$$$$');
+        paintBrushDown = false
         // stop painting
         // stop adding color to div
       })
@@ -61,13 +73,9 @@
 
       //set color when click on palette color
       paletteColor.addEventListener('click', (event) => {
-        console.log('in event listener-- add click to palette color ##########');
         brushColor = color
-        console.log('brushColor---->', brushColor);
-
         currentColor.style.backgroundColor = brushColor
         console.log('create brushColor>>>>', brushColor);
-
       })
 
       palette.appendChild(paletteColor)
