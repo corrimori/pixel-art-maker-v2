@@ -6,10 +6,6 @@ h1 {
   font-size: 36px;
 }
 
-/* div {
-  background-color: lightblue;
-} */
-
 .pixel {
   background-color: aliceblue;
   border: 1px solid silver;
@@ -34,9 +30,9 @@ h1 {
   border: solid #808B96 1px
 }
 
-.black {
-  background-color: 'black';
-  border-color: 'black';
+#container {
+  display: flex;
+  justify-content: center;
 }
 
 #canvas {
@@ -53,4 +49,10 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
+}
+
+#showCurrentColor {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
 }
